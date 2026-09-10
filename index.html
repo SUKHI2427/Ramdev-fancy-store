@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ramdev Fancy Store - R.T. Road, Sira</title>
-<link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
-<link href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Karla:wght@400;500;600;700&display=swap)" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --marigold: #E8973A;
@@ -152,7 +152,8 @@
     border:1px solid rgba(200,155,60,0.28); position:relative; transition:transform .18s ease, box-shadow .18s ease;
   }
   .shelf-card:hover{transform:translateY(-5px); box-shadow:0 18px 30px -18px rgba(42,31,20,0.35);}
-  .shelf-icon{width:52px; height:52px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--cream-2);}
+  .shelf-icon{width:52px; height:52px; margin:0 auto 14px; display:flex; align-items:center; justify-content:center; border-radius:50%; background:var(--cream-2); overflow:hidden;}
+  .shelf-icon img{width:100%; height:100%; object-fit:cover;}
   .shelf-card h3{font-size:1.02rem; color:var(--ink); margin-bottom:6px;}
   .shelf-card p{font-size:0.83rem; color:#6b5a44; line-height:1.5;}
 
@@ -167,7 +168,9 @@
   .pick-visual{
     height:120px; display:flex; align-items:center; justify-content:center;
     background:linear-gradient(135deg, var(--marigold), var(--rani));
+    overflow:hidden;
   }
+  .pick-visual img{width:100%; height:100%; object-fit:cover;}
   .pick-body{padding:16px 18px 20px;}
   .pick-tag{font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--rani); margin-bottom:4px;}
   .pick-body h3{font-size:0.98rem; color:var(--ink); margin-bottom:4px;}
@@ -201,6 +204,7 @@
     border-radius:16px; min-height:280px; display:flex; align-items:center; justify-content:center; overflow:hidden;
   }
   .story-visual svg{width:80%; height:auto;}
+  .story-visual img{width:100%; height:100%; object-fit:cover;}
 
   /* ---------- Gallery ---------- */
   .gallery-note{text-align:center; color:#8a7660; font-size:0.82rem; margin-top:-24px; margin-bottom:40px;}
@@ -210,6 +214,7 @@
     aspect-ratio:1/1; border-radius:14px; display:flex; align-items:center; justify-content:center;
     position:relative; overflow:hidden;
   }
+  .g-tile img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
   .g-tile span{
     position:absolute; bottom:10px; left:12px; color:var(--paper); font-size:0.72rem; font-weight:700;
     letter-spacing:0.04em; text-transform:uppercase; z-index:2;
@@ -487,10 +492,10 @@
       <h2 class="section-title">Around the shop</h2>
     </div>
     <div class="gallery">
-      <div class="g-tile g1"><span>Cosmetics Aisle</span></div>
-      <div class="g-tile g2"><span>Bangle Counter</span></div>
+      <div class="g-tile g1"><img src="images/cosmetics-aisle.jpeg" alt="Cosmetics products at Ramdev Fancy Store"><span>Cosmetics Aisle</span></div>
+      <div class="g-tile g2"><img src="images/bangles/gold-bangles-tray.jpeg" alt="Bangles at Ramdev Fancy Store"><span>Bangle Counter</span></div>
       <div class="g-tile g3"><span>Bag Wall</span></div>
-      <div class="g-tile g4"><span>Gift Corner</span></div>
+      <div class="g-tile g4"><img src="images/gift-items/plastic-holders.jpeg" alt="Gift and household items at Ramdev Fancy Store"><span>Gift Corner</span></div>
     </div>
     <p class="gallery-note">Illustrative preview - real photos of the shop can be dropped in here once shared.</p>
   </section>
@@ -565,7 +570,7 @@
           <iframe
             loading="lazy"
             title="Ramdev Fancy Store location map"
-            src="[google.com](https://www.google.com/maps?q=Ramdev+Fancy+Store+RT+Road+Sira+Karnataka&output=embed)">
+            src="https://www.google.com/maps?q=Ramdev+Fancy+Store+RT+Road+Sira+Karnataka&output=embed">
           </iframe>
         </div>
       </div>
