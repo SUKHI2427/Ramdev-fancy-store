@@ -157,6 +157,18 @@
   .shelf-card h3{font-size:1.02rem; color:var(--ink); margin-bottom:6px;}
   .shelf-card p{font-size:0.83rem; color:#6b5a44; line-height:1.5;}
 
+  /* ---------- Water Bottles grid ---------- */
+  .bottle-grid{display:grid; grid-template-columns:repeat(6, 1fr); gap:14px;}
+  @media(max-width:900px){.bottle-grid{grid-template-columns:repeat(4,1fr);}}
+  @media(max-width:640px){.bottle-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(max-width:420px){.bottle-grid{grid-template-columns:repeat(2,1fr);}}
+  .bottle-tile{
+    aspect-ratio:3/4; border-radius:12px; overflow:hidden; background:var(--paper);
+    border:1px solid rgba(200,155,60,0.28); transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .bottle-tile:hover{transform:translateY(-4px); box-shadow:0 14px 26px -16px rgba(42,31,20,0.35);}
+  .bottle-tile img{width:100%; height:100%; object-fit:cover; display:block;}
+
   /* ---------- Best sellers ---------- */
   .picks{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
   @media(max-width:900px){.picks{grid-template-columns:repeat(2,1fr);}}
@@ -302,6 +314,7 @@
     <div class="nav-brand">🪔 Ramdev <span>Fancy Store</span></div>
     <div class="nav-links">
       <a href="#shelves">Shop</a>
+      <a href="#water-bottles">Bottles</a>
       <a href="#picks">Popular</a>
       <a href="#why">Why Us</a>
       <a href="#gallery">Gallery</a>
@@ -331,7 +344,7 @@
   <div class="hero">
     <div class="signboard">
       <div class="stamp">Local &amp; Trusted ✦ Sira</div>
-      <div class="eyebrow">Cosmetics · Bangles · Gifts · Toys · School &amp; College Bags</div>
+      <div class="eyebrow">Cosmetics · Bangles · Gifts · Toys · Bags · Water Bottles</div>
       <h1 class="shop-name">Ramdev<br><em class="fancy">Fancy Store</em></h1>
       <p class="tagline">ನಾವು ಎಲ್ಲ ಬಗೆಯ ಸಾಮಾನುಗಳನ್ನು ಮಾರುತ್ತೇವೆ</p>
       <p class="hero-sub">The neighbourhood shop on R.T. Road for everything a family in Sira picks up in a single trip - cosmetics, bangles, gift items, toys and bags for school, college and everyday carry.</p>
@@ -387,6 +400,46 @@
         <div class="shelf-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 10.5 12 6l8 4.5v7L12 22l-8-4.5v-7Z" stroke="#C89B3C" stroke-width="1.6" stroke-linejoin="round"/><path d="M4 10.5 12 15l8-4.5M12 15v7" stroke="#C89B3C" stroke-width="1.6"/></svg></div>
         <h3>College Bags</h3><p>Everyday backpacks built for the commute and the campus.</p>
       </div>
+      <div class="shelf-card">
+        <div class="shelf-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 3h6v3l1 2v11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8l1-2V3Z" stroke="#0D5C56" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 6h6" stroke="#0D5C56" stroke-width="1.6"/></svg></div>
+        <h3>Water Bottles</h3><p>Steel and plastic bottles for school, sport, and everyday use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="water-bottles">
+    <div class="section-head">
+      <div class="section-eyebrow">Stay Hydrated</div>
+      <h2 class="section-title">Water Bottles</h2>
+      <p class="section-desc">Steel and plastic bottles in every size, colour and print - for school, sport, gym or the office desk.</p>
+    </div>
+    <div class="bottle-grid">
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-01.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-02.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-03.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-04.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-05.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-06.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-07.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-08.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-09.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-10.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-11.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-12.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-13.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-14.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-15.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-16.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-17.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-18.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-19.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-20.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-21.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-22.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-23.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-24.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-25.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
+      <div class="bottle-tile"><img src="images/water-bottles/water-bottles-26.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
     </div>
   </section>
 
@@ -590,6 +643,7 @@
           <li><a href="#shelves">Bangles &amp; Jewellery</a></li>
           <li><a href="#shelves">School Bags</a></li>
           <li><a href="#shelves">College Bags</a></li>
+          <li><a href="#water-bottles">Water Bottles</a></li>
         </ul>
       </div>
       <div class="foot-col">
