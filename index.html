@@ -219,23 +219,31 @@
   .story-visual img{width:100%; height:100%; object-fit:cover;}
 
   /* ---------- Gallery ---------- */
-  .gallery-note{text-align:center; color:#8a7660; font-size:0.82rem; margin-top:-24px; margin-bottom:40px;}
-  .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
-  @media(max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);}}
-  .g-tile{
-    aspect-ratio:1/1; border-radius:14px; display:flex; align-items:center; justify-content:center;
-    position:relative; overflow:hidden;
+  .gallery-note{text-align:center; color:#8a7660; font-size:0.82rem; margin-top:28px;}
+  .gallery-categories{display:grid; grid-template-columns:repeat(4,1fr); gap:14px;}
+  @media(max-width:760px){.gallery-categories{grid-template-columns:repeat(2,1fr);}}
+  .gallery-card{
+    aspect-ratio:1/1; border-radius:14px; position:relative; overflow:hidden; cursor:pointer;
+    border:2.5px solid transparent; transition:border-color .18s ease, transform .18s ease;
+    background:var(--cream-2);
   }
-  .g-tile img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
-  .g-tile span{
-    position:absolute; bottom:10px; left:12px; color:var(--paper); font-size:0.72rem; font-weight:700;
-    letter-spacing:0.04em; text-transform:uppercase; z-index:2;
+  .gallery-card:hover{transform:translateY(-3px);}
+  .gallery-card.active{border-color:var(--marigold);}
+  .gallery-card img{width:100%; height:100%; object-fit:cover; position:absolute; inset:0;}
+  .gallery-card-label{
+    position:absolute; bottom:0; left:0; right:0; z-index:2; padding:12px 12px 10px;
+    background:linear-gradient(180deg, transparent 30%, rgba(9,63,59,0.78));
+    display:flex; flex-direction:column; gap:2px;
   }
-  .g-tile::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 40%, rgba(9,63,59,0.55));}
-  .g1{background:linear-gradient(135deg, var(--marigold), var(--gold));}
-  .g2{background:linear-gradient(135deg, var(--rani), #8a2350);}
-  .g3{background:linear-gradient(135deg, var(--teal), var(--teal-deep));}
-  .g4{background:linear-gradient(135deg, var(--gold), var(--rani));}
+  .gallery-card-label strong{color:var(--paper); font-size:0.8rem; font-weight:700; letter-spacing:0.02em; text-transform:uppercase; line-height:1.2;}
+  .gallery-card-label span{color:rgba(251,243,231,0.85); font-size:0.68rem; font-weight:600;}
+  .gallery-panel{
+    display:none; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:22px;
+    padding-top:22px; border-top:1px dashed rgba(200,155,60,0.35);
+  }
+  .gallery-panel.open{display:grid;}
+  .gallery-panel img{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:10px; border:1px solid rgba(200,155,60,0.25);}
+  @media(max-width:760px){.gallery-panel{grid-template-columns:repeat(2,1fr);}}
 
   /* ---------- FAQ ---------- */
   .faq{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:12px;}
@@ -407,42 +415,6 @@
     </div>
   </section>
 
-  <section id="water-bottles">
-    <div class="section-head">
-      <div class="section-eyebrow">Stay Hydrated</div>
-      <h2 class="section-title">Water Bottles</h2>
-      <p class="section-desc">Steel and plastic bottles in every size, colour and print - for school, sport, gym or the office desk.</p>
-    </div>
-    <div class="bottle-grid">
-      <div class="bottle-tile"><img src="water-bottles-01.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-02.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-03.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-04.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-05.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-06.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-07.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-08.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-09.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-10.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-11.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-12.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-13.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-14.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-15.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-16.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-17.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-18.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-19.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-20.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-21.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-22.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-23.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-24.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-25.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-      <div class="bottle-tile"><img src="water-bottles-26.jpeg" alt="Water bottle at Ramdev Fancy Store" loading="lazy"></div>
-    </div>
-  </section>
-
   <div class="bunting" aria-hidden="true">
     <svg width="100%" height="26" viewBox="0 0 1200 26" preserveAspectRatio="none"><g opacity="0.7">
       <polygon points="20,0 44,0 32,24" fill="#E8973A"/><polygon points="70,0 94,0 82,24" fill="#C4326B"/>
@@ -543,14 +515,11 @@
     <div class="section-head">
       <div class="section-eyebrow">A Peek Inside</div>
       <h2 class="section-title">Around the shop</h2>
+      <p class="section-desc">Tap any category below to see all the real photos from inside the shop.</p>
     </div>
-    <div class="gallery">
-      <div class="g-tile g1"><img src="cosmetics-aisle.jpeg" alt="Cosmetics products at Ramdev Fancy Store"><span>Cosmetics Aisle</span></div>
-      <div class="g-tile g2"><img src="gold-bangles-tray.jpeg" alt="Bangles at Ramdev Fancy Store"><span>Bangle Counter</span></div>
-      <div class="g-tile g3"><span>Bag Wall</span></div>
-      <div class="g-tile g4"><img src="plastic-holders.jpeg" alt="Gift and household items at Ramdev Fancy Store"><span>Gift Corner</span></div>
-    </div>
-    <p class="gallery-note">Illustrative preview - real photos of the shop can be dropped in here once shared.</p>
+    <div class="gallery-categories" id="galleryCategories"></div>
+    <div id="galleryPanels"></div>
+    <p class="gallery-note">Photos are straight from the shop counter - tap a card, scroll down to browse, tap again to close.</p>
   </section>
 
   <div class="cta-strip">
@@ -669,5 +638,87 @@
     </div>
   </footer>
 
+
+<script>
+  var GALLERY_DATA = {
+    "cosmetics": {
+      label: "Cosmetics",
+      files: ["cosmetics-aisle.jpeg","lip-glow-oil-display.jpeg","razors-pack.jpeg","vega-nail-clipper-1.jpeg","vega-nail-clipper-2.jpeg","vega-nail-clipper-3.jpeg","vega-turboone-trimmer.jpeg","trimmers-clippers-counter.jpeg","denver-deo-display.jpeg","cosmetics-01.jpeg","cosmetics-02.jpeg","cosmetics-03.jpeg","cosmetics-04.jpeg","cosmetics-05.jpeg","cosmetics-06.jpeg","cosmetics-07.jpeg","cosmetics-08.jpeg","cosmetics-09.jpeg","cosmetics-10.jpeg","cosmetics-11.jpeg","cosmetics-12.jpeg","cosmetics-13.jpeg","cosmetics-14.jpeg","cosmetics-15.jpeg","cosmetics-16.jpeg","cosmetics-17.jpeg","cosmetics-18.jpeg","cosmetics-19.jpeg","cosmetics-20.jpeg","cosmetics-21.jpeg","cosmetics-22.jpeg","cosmetics-23.jpeg","cosmetics-24.jpeg"]
+    },
+    "bangles": {
+      label: "Bangles & Jewellery",
+      files: ["gold-bangles-tray.jpeg"]
+    },
+    "hair-accessories": {
+      label: "Hair Accessories",
+      files: ["hair-clips-shop.jpeg","brushes-in-shop.jpeg","combs-wall-display.jpeg","paddle-brushes-colorful.jpeg","round-brushes-flatlay.jpeg","round-brushes-pack.jpeg","shubham-brushes.jpeg","hair-accessories-01.jpeg","hair-accessories-02.jpeg"]
+    },
+    "gift-items": {
+      label: "Gift Items",
+      files: ["mugs-toys-shelf.jpeg","plastic-holders.jpeg","cutlery-caddies.jpeg","glass-tea-cups.jpeg","kitchen-knives.jpeg","mosquito-swatter-bats.jpeg","novelty-soaps.jpeg","plastic-crates.jpeg","premium-peeler.jpeg","soap-boxes.jpeg","gift-items-01.jpeg","gift-items-02.jpeg"]
+    },
+    "pooja-festival": {
+      label: "Pooja & Festival Items",
+      files: ["krishna-laddu-gopal.jpeg","lakshmi-kuber-statues.jpeg","adiyogi-shiva-busts.jpeg","buddha-blue-robe.jpeg","buddha-children-figurines.jpeg","buddha-hand-statues.jpeg","buddha-head-busts.jpeg","buddha-head-single.jpeg","buddha-sitting-white.jpeg","green-ganesha-pair.jpeg","lakshmi-idols-shelf.jpeg","nandi-cow-statue.jpeg","orange-devi-statue.jpeg","radha-krishna-glow-green.jpeg","radha-krishna-peacock.jpeg","sev-press-tool.jpeg"]
+    },
+    "school-bags": {
+      label: "School Bags",
+      files: ["pencil-pouches.jpeg"]
+    },
+    "water-bottles": {
+      label: "Water Bottles",
+      files: ["water-bottles-01.jpeg","water-bottles-02.jpeg","water-bottles-03.jpeg","water-bottles-04.jpeg","water-bottles-05.jpeg","water-bottles-06.jpeg","water-bottles-07.jpeg","water-bottles-08.jpeg","water-bottles-09.jpeg","water-bottles-10.jpeg","water-bottles-11.jpeg","water-bottles-12.jpeg","water-bottles-13.jpeg","water-bottles-14.jpeg","water-bottles-15.jpeg","water-bottles-16.jpeg","water-bottles-17.jpeg","water-bottles-18.jpeg","water-bottles-19.jpeg","water-bottles-20.jpeg","water-bottles-21.jpeg","water-bottles-22.jpeg","water-bottles-23.jpeg","water-bottles-24.jpeg","water-bottles-25.jpeg","water-bottles-26.jpeg"]
+    }
+  };
+
+  function initGallery(){
+    var catsEl = document.getElementById('galleryCategories');
+    var panelsEl = document.getElementById('galleryPanels');
+    if(!catsEl || !panelsEl) return;
+    Object.keys(GALLERY_DATA).forEach(function(key){
+      var cat = GALLERY_DATA[key];
+      var card = document.createElement('div');
+      card.className = 'gallery-card';
+      card.setAttribute('data-cat', key);
+      if(key === 'water-bottles'){ card.id = 'water-bottles'; }
+      card.innerHTML = '<img src="' + cat.files[0] + '" alt="' + cat.label + ' at Ramdev Fancy Store" loading="lazy">' +
+        '<div class="gallery-card-label"><strong>' + cat.label + '</strong><span>' + cat.files.length + ' photo' + (cat.files.length>1?'s':'') + '</span></div>';
+      card.addEventListener('click', function(){ toggleGalleryPanel(key); });
+      catsEl.appendChild(card);
+
+      var panel = document.createElement('div');
+      panel.className = 'gallery-panel';
+      panel.id = 'panel-' + key;
+      panel.innerHTML = cat.files.map(function(f){
+        return '<img src="' + f + '" alt="' + cat.label + ' at Ramdev Fancy Store" loading="lazy">';
+      }).join('');
+      panelsEl.appendChild(panel);
+    });
+  }
+
+  function toggleGalleryPanel(key){
+    var panel = document.getElementById('panel-' + key);
+    var card = document.querySelector('.gallery-card[data-cat="' + key + '"]');
+    var wasOpen = panel.classList.contains('open');
+    document.querySelectorAll('.gallery-panel').forEach(function(p){ p.classList.remove('open'); });
+    document.querySelectorAll('.gallery-card').forEach(function(c){ c.classList.remove('active'); });
+    if(!wasOpen){
+      panel.classList.add('open');
+      card.classList.add('active');
+      setTimeout(function(){ panel.scrollIntoView({behavior:'smooth', block:'nearest'}); }, 60);
+    }
+  }
+
+  function checkHashOpen(){
+    if(window.location.hash === '#water-bottles'){
+      setTimeout(function(){ toggleGalleryPanel('water-bottles'); }, 150);
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    initGallery();
+    checkHashOpen();
+  });
+  window.addEventListener('hashchange', checkHashOpen);
+</script>
 </body>
 </html>
